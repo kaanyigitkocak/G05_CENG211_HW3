@@ -1,12 +1,12 @@
 package BusinessLayer;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 public interface Borrowable {
-    void borrowItem(String customerType, LocalDate startBorrow, LocalDate endBorrow);
-    int calculateBorrowingDays();
-    double calculateLateCharge();
-    double calculateBorrowingCharge();
-    double calculateDiscount();
-    double calculateTotalPrice();
+	
+    int calculateBorrowingDays(Date startBorrow, Date endBorrow);
+    double calculateLateCharge(Member customer);
+    double calculateBorrowingCharge(Date startBorrow, Date endBorrow);
+    double calculateDiscount(Member customer);
+    int calculateTotalPrice();
 }

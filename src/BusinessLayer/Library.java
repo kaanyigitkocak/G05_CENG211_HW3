@@ -6,8 +6,8 @@ import java.util.List;
 public class Library {
     private List<Item> items;
 
-    public Library() {
-        this.items = new ArrayList<>();
+    public Library(ArrayList<Item> items) {
+        this.items = items;
     }
 
     public void addItem(Item item) {
