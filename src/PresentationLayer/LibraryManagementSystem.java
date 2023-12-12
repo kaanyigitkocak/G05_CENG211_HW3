@@ -12,5 +12,6 @@ public class LibraryManagementSystem {
     	ArrayList<Item> items = FileIO.readItems();
     	Library library = new Library(items);
     	library.printAllItems();   	
+    	library.searchAndPrint("Java Programming");
     }
 }

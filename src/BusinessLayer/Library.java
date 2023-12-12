@@ -14,10 +14,26 @@ public class Library {
         items.add(item);
     }
 
+    public void searchAndPrint(String title) {
+        boolean found = false;
+        for (Item item : items) {
+            if (item.searchByTitle(title)) {
+            	System.out.println("Item with title '" + title + "' does exist.");
+            	System.out.println();
+                item.printDetails();
+                found = true;
+            }
+        }
+        if (!found) {
+            System.out.println("Item with title '" + title + "' does not exist.");
+        }
+    }
+    
     public void searchAndPrint(String title, String itemType) {
         boolean found = false;
         for (Item item : items) {
             if (item.searchByTitleAndType(title, itemType)) {
+            	System.out.println("Item with title '" + title + "' and type '" + itemType + "does exist.");
                 item.printDetails();
                 found = true;
             }

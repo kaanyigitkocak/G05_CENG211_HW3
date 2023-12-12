@@ -61,14 +61,12 @@ public abstract class Item implements Searchable, Borrowable {
 
 	@Override
 	public boolean searchByTitle(String title) {
-		// TODO Auto-generated method stub
-		return false;
+		return this.title.equalsIgnoreCase(title);
 	}
 
 	@Override
 	public boolean searchByTitleAndType(String title, String type) {
-		// TODO Auto-generated method stub
-		return false;
+		return this.title.equalsIgnoreCase(title) && this.itemType.equalsIgnoreCase(type);
 	}
 
     public void printDetails() {
@@ -78,7 +76,6 @@ public abstract class Item implements Searchable, Borrowable {
         System.out.println("Total Borrowing Days: " + calculateBorrowingDays(this.startBorrow, this.endBorrow));
         System.out.println("Exceeds Date: " + (exceedsDate ? "exceeds " + this.customerType.getExceedsDay() : "not exceeds"));
         System.out.println("Total Price: $" + calculateTotalPrice());
-        System.out.println("Priority: " + priority.getValue());
         System.out.println("-----------------------------------------");
     }
 
