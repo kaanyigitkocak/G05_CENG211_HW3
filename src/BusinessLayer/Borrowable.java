@@ -4,9 +4,9 @@ import java.util.Date;
 
 public interface Borrowable {
 	
-    int calculateBorrowingDays(Date startBorrow, Date endBorrow);
-    double calculateLateCharge(Member customer);
-    double calculateBorrowingCharge(Date startBorrow, Date endBorrow);
-    double calculateDiscount(Member customer);
-    int calculateTotalPrice();
+    public int calculateBorrowingDays(Date startBorrow, Date endBorrow);
+    public double calculateLateCharge(Member customer);
+    public double calculateBorrowingCharge(Date startBorrow, Date endBorrow);
+    public double calculateDiscount(Member customer);
+    public int calculateTotalPrice();
 }
